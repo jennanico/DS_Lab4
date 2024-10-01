@@ -42,15 +42,16 @@ class TestStack
 		stack.push(stringC);
 		
 		popped = stack.pop();
-		assertEquals(stringA, popped);
+		assertEquals(stringC, popped);
 		
-		assertEquals(stringC, stack.top());
+		assertEquals(stringB, stack.top());
+		
 		popped = stack.pop();
 		assertEquals(stringB, popped);
 		
-		assertEquals(stringC, stack.top());
+		assertEquals(stringA, stack.top());
 		popped = stack.pop();
-		assertEquals(stringC, popped);
+		assertEquals(stringA, popped);
 		
 		assertEquals(true, stack.isEmpty());
 		
