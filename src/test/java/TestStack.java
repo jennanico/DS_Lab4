@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class TestStack
 {
 
-	MyStack stack;
+	MyStack<String> stack;
 	String stringA;
 	String stringB;
 	String stringC;
@@ -14,7 +14,7 @@ class TestStack
 	@BeforeEach
 	void setUp() throws Exception
 	{
-		MyStack stack = new MyStack();
+		MyStack<String> stack = new MyStack<String>();
 		stringA = "Hi";
 		stringB = "Hello";
 		stringC = "Greetings";
