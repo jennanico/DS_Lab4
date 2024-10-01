@@ -1,10 +1,22 @@
 
 public class MyStack<T>
 {
-
+	
+	public class Node<T>
+	{
+		T val;
+		Node<T> next;
+		
+		public Node(T value, Node<T> nextNode)
+		{
+			this.val = value;
+			this.next = nextNode;
+		}
+		
+	}
+		
 	public MyStack()
 	{
-
 	}
 
 	/**

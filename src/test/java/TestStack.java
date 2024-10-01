@@ -14,7 +14,6 @@ class TestStack
 	@BeforeEach
 	void setUp() throws Exception
 	{
-		MyStack<String> stack = new MyStack<String>();
 		stringA = "Hi";
 		stringB = "Hello";
 		stringC = "Greetings";
@@ -23,6 +22,8 @@ class TestStack
 	@Test
 	void testStackUnderFlow()
 	{
+		MyStack<String> stack = new MyStack<String>();
+		
 		assertThrows(StackUnderFlowException.class, () -> {
 			stack.pop();
 		});
@@ -31,6 +32,8 @@ class TestStack
 	@Test
 	void testStack()
 	{
+		MyStack<String> stack = new MyStack<String>();
+		
 		stack.push(stringA);
 		assertEquals(stringA, stack.top());
 	
