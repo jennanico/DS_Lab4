@@ -33,6 +33,7 @@ class TestStack
 	void testStack()
 	{
 		MyStack<String> stack = new MyStack<String>();
+		String popped;
 		
 		stack.push(stringA);
 		assertEquals(stringA, stack.top());
@@ -40,13 +41,16 @@ class TestStack
 		stack.push(stringB);
 		stack.push(stringC);
 		
-		assertEquals(stringA, stack.pop());
+		popped = stack.pop();
+		assertEquals(stringA, popped);
 		
 		assertEquals(stringB, stack.top());
-		assertEquals(stringB, stack.pop());
+		popped = stack.pop();
+		assertEquals(stringB, popped);
 		
 		assertEquals(stringC, stack.top());
-		assertEquals(stringC, stack.pop());
+		popped = stack.pop();
+		assertEquals(stringC, popped);
 		
 		assertEquals(true, stack.isEmpty());
 		
