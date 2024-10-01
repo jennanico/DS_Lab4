@@ -44,7 +44,7 @@ class TestStack
 		popped = stack.pop();
 		assertEquals(stringA, popped);
 		
-		assertEquals(stringB, stack.top());
+		assertEquals(stringC, stack.top());
 		popped = stack.pop();
 		assertEquals(stringB, popped);
 		
