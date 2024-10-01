@@ -14,9 +14,12 @@ public class MyStack<T>
 		}
 		
 	}
+	
+	Node<T> head;
 		
 	public MyStack()
 	{
+		head = null;
 	}
 
 	/**
@@ -25,7 +28,7 @@ public class MyStack<T>
 	 */
 	public void push(T val)
 	{
-
+		head = new Node<T>(val, head);
 	}
 
 	/**
@@ -34,8 +37,12 @@ public class MyStack<T>
 	 */
 	public T top()
 	{
-
-		return null;
+		if (head == null)
+		{
+			throw new StackUnderFlowException();
+		}
+		
+		return head.val;
 	}
 
 	/**
@@ -45,7 +52,15 @@ public class MyStack<T>
 	 */
 	public T pop()
 	{
-		return null;
+		if (head == null)
+		{
+			throw new StackUnderFlowException();
+		}
+		
+		T popVal = head.val;
+		head = head.next;
+		
+		return popVal;
 	}
 
 	/**
@@ -54,7 +69,7 @@ public class MyStack<T>
 	 */
 	public boolean isEmpty()
 	{
-		return true;
+		return (head == null);
 	}
 
 }
